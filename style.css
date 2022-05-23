@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+    gap: 3px;
+}
+
+.container>div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .vertical{
+    grid-column: auto/span 2;
+
+}
+.container .horizontal{
+    grid-row: auto/span 2;
+
+}
+.container .big{
+    grid-row: auto/span 2;
+    grid-column: auto/span 2;
+}
+
